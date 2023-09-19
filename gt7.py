@@ -33,7 +33,7 @@ BUTTON_DISABLED = (sg.theme_background_color(), sg.theme_background_color())
 BUTTON_ENABLED = (sg.theme_button_color_text(), sg.theme_background_color())
 
 labels = [
-    [sg.Text("PS IP Address")],
+    [sg.Text("191.168.10.213)],
     [sg.Text("Local UDP Port")],
     [sg.Text("Capture Replays")],
     [sg.Text("Imperial Units")],
@@ -110,8 +110,8 @@ while True:
             rawfile = None
 
         logger = GT7Logger(
-            rawfile=rawfile,
-            sampler=GT7Sampler(addr=values["IP"], port=values["PORT"], freq=60),
+            rawfile=rawfile
+            sampler=GT7Sampler(addr=values[""], port=values["PORT"], freq=60),
             filetemplate=filetemplate,
             replay=values["REPLAY"],
             driver=values["DRIVER"],
